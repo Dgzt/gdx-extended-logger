@@ -24,4 +24,26 @@ public class Lwjgl3LoggerExecutor implements LoggerExecutor {
         System.out.println("[" + tag + "] " + message);
         throwable.printStackTrace(System.out);
     }
+
+    @Override
+    public void error(String message) {
+        System.err.println(message);
+    }
+
+    @Override
+    public void error(String tag, String message) {
+        System.err.println("[" + tag + "] " + message);
+    }
+
+    @Override
+    public void error(String message, Throwable throwable) {
+        System.err.println(message);
+        throwable.printStackTrace(System.err);
+    }
+
+    @Override
+    public void error(String tag, String message, Throwable throwable) {
+        System.err.println("[" + tag + "] " + message);
+        throwable.printStackTrace(System.err);
+    }
 }

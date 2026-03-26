@@ -57,14 +57,14 @@ public class LoggerImpl implements Logger {
     @Override
     public void error(String message, String... arguments) {
         if (getLogLevel() >= LogLevel.ERROR.value) {
-            executor.print(LoggerUtil.format(message, arguments));
+            executor.error(LoggerUtil.format(message, arguments));
         }
     }
 
     @Override
     public void error(String message, Throwable throwable, String... arguments) {
         if (getLogLevel() >= LogLevel.ERROR.value) {
-            executor.print(LoggerUtil.format(message, arguments), throwable);
+            executor.error(LoggerUtil.format(message, arguments), throwable);
         }
     }
 
