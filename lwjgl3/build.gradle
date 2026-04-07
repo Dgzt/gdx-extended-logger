@@ -1,10 +1,7 @@
 
-//Obviously, change the next line to match your project name.
-def projectName = 'libgdx-library-template'
+def projectName = 'gdx-extended-logger-lwjgl3'
 
-//Change this to whatever Maven Central group you might publish to,
-//which is probably not this one if you aren't Tommy Ettinger.
-group = 'com.github.tommyettinger'
+group = 'com.github.dgzt'
 
 version = "$VERSION_NAME" // You can set the version in gradle.properties .
 
